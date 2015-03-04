@@ -1,0 +1,38 @@
+<div ng-cloak>
+    <div class="row">
+        <div class="col-md-4">
+            <img class="img-responsive img-rounded" src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-xfp1/v/t1.0-9/1901211_803589826365459_2832241816302383404_n.jpg?oh=b79602b21b3dd825292330ad5bb58e80&oe=557DBB0E&__gda__=1435800213_ebd163eba79d0d69742e245bcf7b742a"/>
+        </div>
+        <div class="col-md-8">
+            <h1 translate="main.title">Welcome to, Pandera Web App!</h1>
+
+            <div ng-switch="authenticated">
+                <div class="alert alert-success" ng-switch-when="true"
+                     translate="main.logged.message" translate-values="{username: '{{account.login}}'}">
+                    You are logged in as user "Admin".
+                </div>
+
+                <div class="alert alert-warning" ng-switch-when="false" translate="global.messages.info.register">
+                    Don't have an account? <a href=\"#/register\">Register</a>
+                </div>
+
+                 <div ng-switch-when="true">
+                      <p translate="main.question">
+                            If you have any question with Prashant, contact him at:
+                        </p>
+
+                        <ul>
+                            <li>LinkedIn : https://www.linkedin.com/profile/view?id=198226469</li>
+                        </ul>
+
+                        <p>
+                         <span translate="main.like">If you like Prashant, don't forget to give him a star on </span>&nbsp;<a href="https://github.com/prashantkumar1190" target="_blank" translate="main.github">Github</a>!
+                        </p>
+                 </div>
+
+            </div>
+
+          
+        </div>
+    </div>
+</div>
